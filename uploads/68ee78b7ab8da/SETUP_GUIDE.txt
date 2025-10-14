@@ -1,0 +1,201 @@
+================================================================================
+                    FRIENDSHARE - QUICK SETUP GUIDE
+================================================================================
+
+📋 STEP-BY-STEP INSTALLATION:
+
+1. DATABASE SETUP
+   ─────────────────────────────────────────────────────────────────────────
+   a) Start XAMPP Control Panel
+   b) Start Apache and MySQL services
+   c) Open phpMyAdmin: http://localhost/phpmyadmin
+   d) Click "Import" tab
+   e) Click "Choose File" and select: database.sql
+   f) Click "Go" button
+   ✓ Database "friendshare" will be created with users and files tables
+
+2. VERIFY CONFIGURATION
+   ─────────────────────────────────────────────────────────────────────────
+   a) Open: includes/db.php
+   b) Check database credentials:
+      - Host: localhost
+      - Database: friendshare
+      - Username: root
+      - Password: (empty by default)
+   c) Update if your MySQL credentials are different
+
+3. FILE PERMISSIONS
+   ─────────────────────────────────────────────────────────────────────────
+   The uploads/ folder must be writable:
+   - On Windows: Already configured (no action needed)
+   - On Linux/Mac: Run: chmod 755 uploads/
+
+4. ACCESS THE APPLICATION
+   ─────────────────────────────────────────────────────────────────────────
+   Open your browser and go to:
+   
+   🌐 http://localhost/file/
+   
+   You'll be redirected to the login page.
+
+5. CREATE YOUR FIRST ACCOUNT
+   ─────────────────────────────────────────────────────────────────────────
+   a) Click "Register here"
+   b) Fill in:
+      - Full Name: Your Name
+      - Email: your@email.com
+      - Password: minimum 6 characters
+      - Confirm Password: same as above
+   c) Click "Register"
+   d) You'll be redirected to login page
+
+6. LOGIN AND START SHARING
+   ─────────────────────────────────────────────────────────────────────────
+   a) Enter your email and password
+   b) Click "Login"
+   c) You're now on the Dashboard!
+
+7. TEST FILE SHARING
+   ─────────────────────────────────────────────────────────────────────────
+   To test file sharing, you need at least 2 users:
+   
+   a) Create a second account:
+      - Logout (top-right corner)
+      - Register another user
+   
+   b) Login with first account
+   
+   c) Share a file:
+      - Select the second user from dropdown
+      - Choose a file (max 10MB)
+      - Click "Upload & Share"
+   
+   d) Login with second account
+   
+   e) Download the file:
+      - See file in "Received Files" section
+      - Click "Download" button
+
+================================================================================
+                              FEATURES INCLUDED
+================================================================================
+
+✅ User Registration & Login
+✅ Secure Password Hashing (bcrypt)
+✅ Session Management
+✅ File Upload with Validation
+✅ File Size & Type Checking (max 10MB)
+✅ User List (Friends)
+✅ Received Files List
+✅ Sent Files List
+✅ Secure File Download
+✅ Modern UI with Tailwind CSS
+✅ Responsive Design
+✅ SQL Injection Protection
+✅ XSS Protection
+✅ MIME Type Verification
+
+================================================================================
+                           ALLOWED FILE TYPES
+================================================================================
+
+📄 Documents: PDF, DOC, DOCX, XLS, XLSX, TXT
+🖼️ Images: JPG, JPEG, PNG, GIF
+📦 Archives: ZIP
+
+Maximum File Size: 10 MB
+
+To change these limits, edit: includes/config.php
+
+================================================================================
+                            TROUBLESHOOTING
+================================================================================
+
+❌ "Database Connection Failed"
+   → Ensure MySQL is running in XAMPP
+   → Check credentials in includes/db.php
+   → Verify database "friendshare" exists
+
+❌ "Failed to upload file"
+   → Check uploads/ folder exists
+   → Verify folder has write permissions
+   → Ensure file size is under 10MB
+
+❌ Blank page or errors
+   → Enable error reporting in php.ini:
+     display_errors = On
+     error_reporting = E_ALL
+   → Restart Apache after changes
+
+❌ Session issues
+   → Clear browser cookies
+   → Check session.save_path in php.ini
+   → Restart Apache
+
+================================================================================
+                          PROJECT STRUCTURE
+================================================================================
+
+friendshare/
+│
+├── includes/
+│   ├── config.php          ← Configuration settings
+│   ├── db.php              ← Database connection
+│   └── functions.php       ← Helper functions
+│
+├── uploads/                ← Uploaded files (auto-created)
+│   └── .htaccess           ← Security protection
+│
+├── .htaccess               ← Apache configuration
+├── database.sql            ← Database schema
+├── index.php               ← Entry point
+├── register.php            ← Registration page
+├── login.php               ← Login page
+├── dashboard.php           ← Main dashboard
+├── upload.php              ← Upload handler
+├── download.php            ← Download handler
+├── logout.php              ← Logout handler
+├── README.md               ← Full documentation
+└── SETUP_GUIDE.txt         ← This file
+
+================================================================================
+                          SECURITY FEATURES
+================================================================================
+
+🔒 Password hashing with bcrypt (password_hash)
+🔒 Prepared statements (SQL injection prevention)
+🔒 Input sanitization (XSS prevention)
+🔒 File type validation (MIME type checking)
+🔒 File size limits
+🔒 Session-based authentication
+🔒 Access control (users can only download their files)
+🔒 Unique file naming (prevents overwrites)
+🔒 .htaccess protection on uploads folder
+
+================================================================================
+                          DEFAULT CREDENTIALS
+================================================================================
+
+Database:
+  Host: localhost
+  Name: friendshare
+  User: root
+  Pass: (empty)
+
+No default user accounts - you must register!
+
+================================================================================
+                          SUPPORT & DOCUMENTATION
+================================================================================
+
+📖 Full Documentation: README.md
+🌐 Access URL: http://localhost/file/
+💾 Database: phpMyAdmin → http://localhost/phpmyadmin
+
+================================================================================
+                              ENJOY FRIENDSHARE!
+================================================================================
+
+Share files securely with your friends! 🎉
+
+For questions or issues, refer to README.md for detailed documentation.
