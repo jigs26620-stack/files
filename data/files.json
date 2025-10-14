@@ -16,5 +16,14 @@
         "file_path": "uploads\/68ee78b7ab8da\/SETUP_GUIDE.txt",
         "upload_time": "2025-10-14 18:30:36",
         "file_size": 8088
+    },
+    {
+        "id": "68ee7e28b4b93",
+        "sender": "68ee781ab0655",
+        "receiver": "68ee78b7ab8da",
+        "file_name": "IMG20251014110819.jpg",
+        "file_path": "uploads\/68ee781ab0655\/IMG20251014110819.jpg",
+        "upload_time": "2025-10-14 12:45:28",
+        "file_size": 1040775
     }
 ]
