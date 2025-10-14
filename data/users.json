@@ -12,5 +12,12 @@
         "email": "t1@g.com",
         "password": "$2y$10$t\/LS5uZVlGziWJluNh5HRuW5lB5l4mn5Lx4THKSytIm.Yu5gR2dvW",
         "created_at": "2025-10-14 18:22:15"
+    },
+    {
+        "id": "user_68ee8254cc7cb4.74239830",
+        "name": "Nayan rughani",
+        "email": "n1@gmail.com",
+        "password": "$2y$10$08djE1cdhLXIYjAsEUXGzOLuZuO\/\/CbDkrSQxxPHTCzHH7Z3\/G07O",
+        "created_at": "2025-10-14T13:03:16-04:00"
     }
 ]
